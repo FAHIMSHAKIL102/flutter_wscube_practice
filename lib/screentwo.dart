@@ -11,7 +11,7 @@ class Screentwo extends StatefulWidget {
 class _ScreentwoState extends State<Screentwo> {
   @override
   Widget build(BuildContext context) {
-    List nameList = ['Fahim', 'Shakil', 'Shakib', 'Shamin'];
+    List nameList = ['Fahim','Shakil','Shakib','Shamin','Sayem','Sifat'];
     return Scaffold(
       appBar: AppBar(
         title: Text('ScreenTwo'),
@@ -30,8 +30,7 @@ class _ScreentwoState extends State<Screentwo> {
       ),
       body: Column(
         children: [
-          Container(
-            height: 400,
+          Expanded(
             child: ListView.builder(
               itemBuilder: (context, index) {
                 return Row(
@@ -96,7 +95,23 @@ class _ScreentwoState extends State<Screentwo> {
               itemCount: nameList.length,
             ),
           ),
-          Container(height: 200, color: Colors.blueGrey),
+          SizedBox(height: 20),
+          Expanded(
+            child: ListView.separated(
+              itemBuilder: (context, index) {
+                return ListTile(
+                  leading: Text('${index + 1}'),
+                  title: Text(nameList[index]),
+                  subtitle: Text('Number'),
+                  trailing: Icon(Icons.add_ic_call),
+                );
+              },
+              separatorBuilder: (context, index) {
+                return Divider(height: 10, thickness: 1);
+              },
+              itemCount: nameList.length,
+            ),
+          ),
         ],
       ),
     );

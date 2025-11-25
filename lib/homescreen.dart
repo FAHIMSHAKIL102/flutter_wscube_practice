@@ -15,7 +15,8 @@ class _HomescreenState extends State<Homescreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter'),
-        backgroundColor: Colors.lightGreen,actions: [
+        backgroundColor: Colors.lightGreen,
+        actions: [
           InkWell(
             onTap: () {
               Navigator.push(
@@ -133,8 +134,8 @@ class _HomescreenState extends State<Homescreen> {
               ),
             ),
             Container(
-              height: 50,
-              width: 200,
+              height: 35,
+              width: 150,
               color: Colors.blue,
               child: SingleChildScrollView(
                 child: Column(
@@ -322,11 +323,11 @@ class _HomescreenState extends State<Homescreen> {
               ),
             ),
             Container(
-              margin: EdgeInsets.all(20),
+              transform: Matrix4.rotationZ(.1),
               height: 200,
               width: 200,
-              decoration: BoxDecoration(color: Colors.blueGrey),
-            ),
+              color: Colors.blueGrey.shade200,
+            ),SizedBox(height: 50,)
           ],
         ),
       ),
