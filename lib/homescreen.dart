@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wscube_practice/screenthree.dart';
 import 'package:flutter_wscube_practice/screentwo.dart';
 
 class Homescreen extends StatefulWidget {
@@ -14,7 +15,17 @@ class _HomescreenState extends State<Homescreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter'),
-        backgroundColor: Colors.lightGreen,
+        backgroundColor: Colors.lightGreen,actions: [
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Screentwo()),
+              );
+            },
+            child: Icon(Icons.arrow_circle_right),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -101,6 +112,23 @@ class _HomescreenState extends State<Homescreen> {
                       color: Colors.lightBlue,
                     ),
                   ),
+                ),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Screenthree()),
+                );
+              },
+              child: Text(
+                'ScreenThree',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green,
                 ),
               ),
             ),
@@ -275,6 +303,29 @@ class _HomescreenState extends State<Homescreen> {
                   ),
                 ),
               ),
+            ),
+            Container(
+              margin: EdgeInsets.all(20),
+              height: 200,
+              width: 200,
+              decoration: BoxDecoration(
+                color: Colors.blueGrey,
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(width: 2, color: Colors.black),
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 20,
+                    spreadRadius: 1,
+                    color: Colors.blueGrey,
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(20),
+              height: 200,
+              width: 200,
+              decoration: BoxDecoration(color: Colors.blueGrey),
             ),
           ],
         ),
