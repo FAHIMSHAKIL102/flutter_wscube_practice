@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_wscube_practice/homescreen.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -13,7 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:Homescreen()
-      );
+      theme: ThemeData(primarySwatch: Colors.lightGreen),
+      home: Homescreen(),
+    );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wscube_practice/screenfour.dart';
 import 'package:flutter_wscube_practice/screenthree.dart';
 import 'package:flutter_wscube_practice/screentwo.dart';
 
@@ -125,6 +126,23 @@ class _HomescreenState extends State<Homescreen> {
               },
               child: Text(
                 'ScreenThree',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green,
+                ),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Screenfour()),
+                );
+              },
+              child: Text(
+                'Screenfour',
                 style: TextStyle(
                   fontSize: 20,
                   fontStyle: FontStyle.italic,
@@ -327,7 +345,8 @@ class _HomescreenState extends State<Homescreen> {
               height: 200,
               width: 200,
               color: Colors.blueGrey.shade200,
-            ),SizedBox(height: 50,)
+            ),
+            SizedBox(height: 50),
           ],
         ),
       ),

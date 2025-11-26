@@ -11,7 +11,7 @@ class Screentwo extends StatefulWidget {
 class _ScreentwoState extends State<Screentwo> {
   @override
   Widget build(BuildContext context) {
-    List nameList = ['Fahim','Shakil','Shakib','Shamin','Sayem','Sifat'];
+    List nameList = ['Fahim', 'Shakil', 'Shakib', 'Shamin', 'Sayem', 'Sifat'];
     return Scaffold(
       appBar: AppBar(
         title: Text('ScreenTwo'),
