@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 
 TextStyle myTextstyle12({Color blackColor = Colors.black}) {
   return TextStyle(

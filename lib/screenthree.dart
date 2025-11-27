@@ -21,11 +21,11 @@ class Screenthree extends StatelessWidget {
                   return Column(
                     children: [
                       CircleAvatar(
-                        child: Text('Shakil', style: myTextstyle16()),
                         maxRadius: 50,
                         backgroundImage: NetworkImage(
                           'https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-beach-free-image-after-sunset-sky-free-photo.jpeg?w=600&quality=80',
                         ),
+                        child: Text('Shakil', style: myTextstyle16()),
                       ),
                       Container(
                         height: 100,

@@ -99,11 +99,16 @@ class _ScreentwoState extends State<Screentwo> {
           Expanded(
             child: ListView.separated(
               itemBuilder: (context, index) {
-                return ListTile(
-                  leading: Text('${index + 1}'),
-                  title: Text(nameList[index]),
-                  subtitle: Text('Number'),
-                  trailing: Icon(Icons.add_ic_call),
+                return Card(
+                  child: ListTile(
+                    leading: Text('${index + 1}'),
+                    title: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(nameList[index]),
+                    ),
+                    subtitle: Text('Number'),
+                    trailing: Icon(Icons.add_ic_call),
+                  ),
                 );
               },
               separatorBuilder: (context, index) {

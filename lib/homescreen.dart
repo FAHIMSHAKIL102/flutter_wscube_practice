@@ -100,18 +100,25 @@ class _HomescreenState extends State<Homescreen> {
                   MaterialPageRoute(builder: (context) => Screentwo()),
                 );
               },
-              child: Container(
-                margin: EdgeInsets.all(10),
-                height: 50,
-                width: 100,
-                child: Center(
-                  child: Text(
-                    'ScreenTwo',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.lightBlue,
+              child: Card(
+                elevation: 5,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Colors.amber,
+                  ),
+                  margin: EdgeInsets.all(10),
+                  height: 35,
+                  width: 120,
+                  child: Center(
+                    child: Text(
+                      'ScreenTwo',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontStyle: FontStyle.italic,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.lightBlue,
+                      ),
                     ),
                   ),
                 ),
@@ -124,13 +131,16 @@ class _HomescreenState extends State<Homescreen> {
                   MaterialPageRoute(builder: (context) => Screenthree()),
                 );
               },
-              child: Text(
-                'ScreenThree',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.green,
+              child: Card(
+                elevation: 7,
+                child: Text(
+                  'ScreenThree',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green,
+                  ),
                 ),
               ),
             ),
@@ -141,13 +151,16 @@ class _HomescreenState extends State<Homescreen> {
                   MaterialPageRoute(builder: (context) => Screenfour()),
                 );
               },
-              child: Text(
-                'Screenfour',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.green,
+              child: Card(
+                elevation: 7,
+                child: Text(
+                  'ScreenFour',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green,
+                  ),
                 ),
               ),
             ),
