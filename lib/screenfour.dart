@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wscube_practice/screenfive.dart';
 
 class Screenfour extends StatelessWidget {
   Screenfour({super.key});
@@ -8,7 +9,21 @@ class Screenfour extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('ScreenFour')),
+      appBar: AppBar(
+        title: Text('ScreenTwo'),
+        backgroundColor: Colors.lightGreen,
+        actions: [
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Screenfive()),
+              );
+            },
+            child: Icon(Icons.arrow_circle_right),
+          ),
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(

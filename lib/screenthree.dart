@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_wscube_practice/component/mytext.dart';
+import 'package:flutter_wscube_practice/screenfour.dart';
 
 class Screenthree extends StatelessWidget {
   const Screenthree({super.key});
@@ -8,8 +9,19 @@ class Screenthree extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ScreenThree'),
+        title: Text('ScreenTwo'),
         backgroundColor: Colors.lightGreen,
+        actions: [
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Screenfour()),
+              );
+            },
+            child: Icon(Icons.arrow_circle_right),
+          ),
+        ],
       ),
       body: Column(
         children: [

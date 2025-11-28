@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wscube_practice/screenfive.dart';
 import 'package:flutter_wscube_practice/screenfour.dart';
 import 'package:flutter_wscube_practice/screenthree.dart';
 import 'package:flutter_wscube_practice/screentwo.dart';
@@ -164,6 +165,28 @@ class _HomescreenState extends State<Homescreen> {
                 ),
               ),
             ),
+            Card(
+              elevation: 10,
+              shadowColor: Colors.lightBlue,
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Screenfive()),
+                  );
+                },
+                child: Text(
+                  'ScreenFive',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 10),
             Container(
               height: 35,
               width: 150,
