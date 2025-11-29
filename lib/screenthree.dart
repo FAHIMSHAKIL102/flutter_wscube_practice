@@ -9,7 +9,7 @@ class Screenthree extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ScreenTwo'),
+        title: Text('ScreenThree'),
         backgroundColor: Colors.lightGreen,
         actions: [
           InkWell(

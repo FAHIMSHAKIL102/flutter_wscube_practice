@@ -3,14 +3,14 @@ import 'package:flutter_wscube_practice/screenfive.dart';
 
 class Screenfour extends StatelessWidget {
   Screenfour({super.key});
-  var emailcontroller = TextEditingController();
-  var passwordController = TextEditingController();
+  final emailcontroller = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ScreenTwo'),
+        title: Text('ScreenFour'),
         backgroundColor: Colors.lightGreen,
         actions: [
           InkWell(
