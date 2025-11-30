@@ -106,7 +106,7 @@ class _ScreentwoState extends State<Screentwo> {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(nameList[index]),
                     ),
-                    subtitle: Text('Number'),
+                    subtitle: Text('  Number'),
                     trailing: Icon(Icons.add_ic_call),
                   ),
                 );

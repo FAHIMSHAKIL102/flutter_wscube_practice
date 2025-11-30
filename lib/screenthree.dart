@@ -23,7 +23,8 @@ class Screenthree extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
+      body: Column(mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
             child: Container(
@@ -52,7 +53,7 @@ class Screenthree extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(child: Container(color: Colors.red)),
+          Expanded(child: Container(height: 100,width:100,color: Colors.lime,child:  Text('Fahim'))),
         ],
       ),
     );
