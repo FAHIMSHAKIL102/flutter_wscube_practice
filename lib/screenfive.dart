@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_wscube_practice/component/mytext.dart';
+import 'package:flutter_wscube_practice/screensix.dart';
 import 'package:intl/intl.dart';
 
 class Screenfive extends StatefulWidget {
@@ -14,7 +15,21 @@ class _ScreenfiveState extends State<Screenfive> {
   Widget build(BuildContext context) {
     var time = DateTime.now();
     return Scaffold(
-      appBar: AppBar(title: Text('ScreenFive'),backgroundColor: Colors.lightGreen,),
+      appBar: AppBar(
+        title: Text('ScreenFive'),
+        backgroundColor: Colors.lightGreen,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Screensix()),
+              );
+            },
+            icon: Icon(Icons.arrow_circle_right),
+          ),
+        ],
+      ),
       body: Column(
         children: [
           Text(

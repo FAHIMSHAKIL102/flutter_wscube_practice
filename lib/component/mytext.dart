@@ -19,7 +19,7 @@ TextStyle myTextstyle16({Color blueColor = Colors.blue}) {
 TextStyle myTextstyle20({Color redColor = Colors.red}) {
   return TextStyle(
     fontSize: 20,
-    fontWeight: FontWeight.normal,
+    fontWeight: FontWeight.bold,
     color: redColor,
   );
 }

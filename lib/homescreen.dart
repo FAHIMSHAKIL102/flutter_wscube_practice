@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wscube_practice/component/mytext.dart';
 import 'package:flutter_wscube_practice/screenfive.dart';
 import 'package:flutter_wscube_practice/screenfour.dart';
+import 'package:flutter_wscube_practice/screensix.dart';
 import 'package:flutter_wscube_practice/screenthree.dart';
 import 'package:flutter_wscube_practice/screentwo.dart';
 
@@ -125,15 +127,15 @@ class _HomescreenState extends State<Homescreen> {
                 ),
               ),
             ),
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Screenthree()),
-                );
-              },
-              child: Card(
-                elevation: 7,
+            Card(
+              elevation: 7,
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Screenthree()),
+                  );
+                },
                 child: Text(
                   'ScreenThree',
                   style: TextStyle(
@@ -145,17 +147,17 @@ class _HomescreenState extends State<Homescreen> {
                 ),
               ),
             ),
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Screenfour()),
-                );
-              },
-              child: Card(
-                elevation: 7,
+            Card(
+              elevation: 7,
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Screenfour()),
+                  );
+                },
                 child: Text(
-                  'ScreenFour',
+                  'ScreenFour ',
                   style: TextStyle(
                     fontSize: 20,
                     fontStyle: FontStyle.italic,
@@ -176,7 +178,7 @@ class _HomescreenState extends State<Homescreen> {
                   );
                 },
                 child: Text(
-                  'ScreenFive',
+                  'ScreenFive ',
                   style: TextStyle(
                     fontSize: 20,
                     fontStyle: FontStyle.italic,
@@ -186,7 +188,22 @@ class _HomescreenState extends State<Homescreen> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            Card(
+              elevation: 7,
+              child: TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Screensix()),
+                  );
+                },
+                child: Text(
+                  'ScreenSix  ',
+                  style: myTextstyle20(redColor: Colors.green),
+                ),
+              ),
+            ),
+            SizedBox(height: 25),
             Container(
               height: 35,
               width: 150,
