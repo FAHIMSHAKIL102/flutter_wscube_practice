@@ -23,8 +23,9 @@ class Screenthree extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
             child: Container(
@@ -53,7 +54,31 @@ class Screenthree extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(child: Container(height: 100,width:100,color: Colors.lime,child:  Text('Fahim'))),
+          Expanded(
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 150,
+                      width: 150,
+                      color: Colors.lime,
+                      child: Text('Fahim'),
+                    ),
+                    Container(
+                      height: 150,
+                      width: 150,
+                      color: Colors.deepPurple,
+                      child: Text('Shakil', style: myTextstyle16(),),
+                    ),
+                  ],
+                );
+              },
+              itemCount: 5,
+            ),
+          ),
         ],
       ),
     );

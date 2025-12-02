@@ -10,8 +10,83 @@ class Screensix extends StatefulWidget {
 class _ScreensixState extends State<Screensix> {
   @override
   Widget build(BuildContext context) {
+    List nameList = [
+      'Fahim',
+      'Shakil',
+      'Shakib',
+      'Shamin',
+      'Sayem',
+      'Sifat',
+      'Sanjid',
+      'Safat',
+    ];
+    List colorList = [
+      Colors.purple,
+      Colors.blue,
+      Colors.lightBlue,
+      Colors.green,
+      Colors.yellow,
+      Colors.orange,
+      Colors.red,
+      Colors.black,
+    ];
     return Scaffold(
-      appBar: AppBar(title: Text('ScreenSix'),backgroundColor: Colors.lightGreen,),
+      appBar: AppBar(
+        title: Text('ScreenSix'),
+        backgroundColor: Colors.lightGreen,
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: GridView.count(
+              crossAxisCount: 3,
+              mainAxisSpacing: 10,
+              crossAxisSpacing: 10,
+              children: [
+                Container(color: colorList[0], child: Text(nameList[1])),
+                Container(color: colorList[1], child: Text(nameList[2])),
+                Container(color: colorList[2], child: Text(nameList[3])),
+                Container(color: colorList[3], child: Text(nameList[4])),
+                Container(color: colorList[4], child: Text(nameList[5])),
+                Container(color: colorList[5], child: Text(nameList[6])),
+                Container(color: colorList[6], child: Text(nameList[0])),
+                Container(color: colorList[7], child: Text(nameList[7])),
+              ],
+            ),
+          ),
+          SizedBox(height: 20),
+          Expanded(
+            child: GridView.extent(
+              maxCrossAxisExtent: 120,
+              children: [
+                Container(color: colorList[0], child: Text(nameList[1])),
+                Container(color: colorList[1], child: Text(nameList[2])),
+                Container(color: colorList[2], child: Text(nameList[3])),
+                Container(color: colorList[3], child: Text(nameList[4])),
+                Container(color: colorList[4], child: Text(nameList[5])),
+                Container(color: colorList[5], child: Text(nameList[6])),
+                Container(color: colorList[6], child: Text(nameList[0])),
+                Container(color: colorList[7], child: Text(nameList[7])),
+              ],
+            ),
+          ),
+          SizedBox(height: 10),
+          Expanded(
+            child: GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+              ),
+              itemBuilder: (context, index) {
+                return Container(
+                  color: colorList[index],
+                  child: Text(nameList[index]),
+                );
+              },
+              itemCount: nameList.length,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
