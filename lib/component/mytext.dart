@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+Color orangeColor = Colors.orange;
+
+
+
 TextStyle myTextstyle12({Color blackColor = Colors.black}) {
   return TextStyle(
     fontSize: 12,
@@ -22,4 +26,8 @@ TextStyle myTextstyle20({Color redColor = Colors.red}) {
     fontWeight: FontWeight.bold,
     color: redColor,
   );
+}
+
+TextStyle myTextstyle25({Color orangeColor = Colors.orange}){
+  return TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: orangeColor);
 }

@@ -57,7 +57,7 @@ class _ScreensixState extends State<Screensix> {
           SizedBox(height: 20),
           Expanded(
             child: GridView.extent(
-              maxCrossAxisExtent: 120,
+              maxCrossAxisExtent: 150,
               children: [
                 Container(color: colorList[0], child: Text(nameList[1])),
                 Container(color: colorList[1], child: Text(nameList[2])),
