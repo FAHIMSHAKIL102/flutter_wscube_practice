@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_wscube_practice/component/mytext.dart';
 import 'package:flutter_wscube_practice/screenfive.dart';
 import 'package:flutter_wscube_practice/screenfour.dart';
+import 'package:flutter_wscube_practice/screenseven.dart';
 import 'package:flutter_wscube_practice/screensix.dart';
 import 'package:flutter_wscube_practice/screenthree.dart';
 import 'package:flutter_wscube_practice/screentwo.dart';
@@ -208,7 +209,7 @@ class _HomescreenState extends State<Homescreen> {
               shadowColors: Colors.red,
               callback: () => Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Screenfive()),
+                MaterialPageRoute(builder: (context) => Screenseven()),
               ),
             ),
             // PageButton(buttonName: 'Screenseven'),
