@@ -63,8 +63,8 @@ class _HomescreenState extends State<Homescreen> {
                 ),
               ),
             ),
-
             ElevatedButton(
+              style: ElevatedButton.styleFrom(),
               onPressed: () {
                 print('click ElevatedButton');
               },
@@ -203,6 +203,17 @@ class _HomescreenState extends State<Homescreen> {
                 ),
               ),
             ),
+            PageButton(
+              buttonName: 'Screenseven',
+              shadowColors: Colors.red,
+              callback: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Screenfive()),
+              ),
+            ),
+            // PageButton(buttonName: 'Screenseven'),
+            // PageButton(buttonName: 'Screenseven'),
+            // PageButton(buttonName: 'Screenseven'),
             SizedBox(height: 25),
             Container(
               height: 35,

@@ -59,7 +59,7 @@ class Screenthree extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(height: 200,width: 200,
+                    SizedBox(height: 200,width: 200,
                       child: Stack(
                         children: [
                           Container(
