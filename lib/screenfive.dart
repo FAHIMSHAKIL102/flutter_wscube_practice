@@ -94,6 +94,36 @@ class _ScreenfiveState extends State<Screenfive> {
             },
             child: Text("Show"),
           ),
+          SizedBox(height: 20),
+          RichText(
+            text: TextSpan(
+              style: TextStyle(
+                fontSize: 25,
+                fontStyle: FontStyle.normal,
+                color: Colors.blueGrey,
+              ),
+              children: [
+                TextSpan(text: 'Hello '),
+                TextSpan(
+                  text: 'World',
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.blue,
+                  ),
+                ),
+                 TextSpan(text: '\nWelcome to '),
+                TextSpan(
+                  text: ' Flutter',
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.blue,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

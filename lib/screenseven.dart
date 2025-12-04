@@ -13,7 +13,7 @@ class Screenseven extends StatelessWidget {
       body: Column(crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
-            child: Wrap(
+            child: Wrap(spacing: 10,runSpacing: 10,
               children: [
                 Container(height: 100, width: 100, color: Colors.amberAccent),
                 Container(height: 100, width: 100, color: Colors.lightBlue),
