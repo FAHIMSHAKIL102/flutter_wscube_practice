@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wscube_practice/screenseven.dart';
 
 class Screensix extends StatefulWidget {
   const Screensix({super.key});
@@ -34,6 +35,17 @@ class _ScreensixState extends State<Screensix> {
       appBar: AppBar(
         title: Text('ScreenSix'),
         backgroundColor: Colors.lightGreen,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Screenseven()),
+              );
+            },
+            icon: Icon(Icons.arrow_circle_right,size: 40,color: Colors.white,),
+          ),
+        ],
       ),
       body: Column(
         children: [
