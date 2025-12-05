@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_wscube_practice/homescreen.dart';
+import 'package:flutter_wscube_practice/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.lightGreen),
-      home: Homescreen(),
+      home: Splashscreen(),
     );
   }
 }

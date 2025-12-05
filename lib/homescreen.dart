@@ -362,7 +362,7 @@ class _HomescreenState extends State<Homescreen> {
                 },
                 child: Image(
                   image: NetworkImage(
-                    'https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg',
+                    'https://scontent.fzyl7-1.fna.fbcdn.net/v/t39.30808-1/409543739_3581708042096611_1241447858689791528_n.jpg?stp=dst-jpg_p160x160_tt6&_nc_cat=104&ccb=1-7&_nc_sid=e99d92&_nc_ohc=aGqJeyH3ga8Q7kNvwFSZME0&_nc_oc=AdkA3ORF6DuB5e4ny-fIibAC8pOGPq7F57czGKUMbEHxWRsQ_CfVOCvHrmRCHrr-5fM&_nc_zt=24&_nc_ht=scontent.fzyl7-1.fna&_nc_gid=Eww3xaCRKHZsR6NWN664zw&oh=00_AfmG4dsjogCMGlp0QaiPuIi7WB3TUm5ZbdrK4mEza9tNBA&oe=6938585D',
                   ),
                 ),
               ),
