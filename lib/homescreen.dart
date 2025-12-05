@@ -405,11 +405,19 @@ class _HomescreenState extends State<Homescreen> {
                 ],
               ),
             ),
-            Container(
-              transform: Matrix4.rotationZ(.1),
-              height: 200,
-              width: 200,
-              color: Colors.blueGrey.shade200,
+            ConstrainedBox(
+              constraints: BoxConstraints(
+                maxHeight: 250,
+                maxWidth: 250,
+                minHeight: 150,
+                minWidth: 150,
+              ),
+              child: Container(
+                transform: Matrix4.rotationZ(.1),
+                height: 200,
+                width: 200,
+                color: Colors.blueGrey.shade200,
+              ),
             ),
             SizedBox(height: 50),
           ],
