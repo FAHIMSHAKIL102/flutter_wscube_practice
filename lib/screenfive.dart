@@ -11,9 +11,14 @@ class Screenfive extends StatefulWidget {
 }
 
 class _ScreenfiveState extends State<Screenfive> {
+  RangeValues value = RangeValues(0, 100);
   @override
   Widget build(BuildContext context) {
     var time = DateTime.now();
+    RangeLabels label = RangeLabels(
+      value.start.toString(),
+      value.end.toString(),
+    );
     return Scaffold(
       appBar: AppBar(
         title: Text('ScreenFive'),
@@ -112,7 +117,7 @@ class _ScreenfiveState extends State<Screenfive> {
                     color: Colors.blue,
                   ),
                 ),
-                 TextSpan(text: '\nWelcome to '),
+                TextSpan(text: '\nWelcome to '),
                 TextSpan(
                   text: ' Flutter',
                   style: TextStyle(
@@ -123,6 +128,20 @@ class _ScreenfiveState extends State<Screenfive> {
                 ),
               ],
             ),
+          ),
+          SizedBox(height: 40),
+          RangeSlider(
+            values: value,
+            max: 100,
+            labels: label,
+            divisions: 100,
+            activeColor: Colors.blue,
+            inactiveColor: Colors.blue.shade100,
+            onChanged: (newvalue) {
+              value = newvalue;
+              print('${newvalue.start}and ${newvalue.end}');
+              setState(() {});
+            },
           ),
         ],
       ),
