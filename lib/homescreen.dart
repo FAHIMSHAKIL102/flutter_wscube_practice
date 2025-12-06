@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wscube_practice/bmi_calculatescreen.dart';
 import 'package:flutter_wscube_practice/component/mytext.dart';
 import 'package:flutter_wscube_practice/screenfive.dart';
 import 'package:flutter_wscube_practice/screenfour.dart';
@@ -212,7 +213,13 @@ class _HomescreenState extends State<Homescreen> {
                 MaterialPageRoute(builder: (context) => Screenseven()),
               ),
             ),
-            // PageButton(buttonName: 'Screenseven'),
+            PageButton(
+              buttonName: 'BMI Calculate',
+              callback: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => BmiCalculatescreen()),
+              ),
+            ),
             // PageButton(buttonName: 'Screenseven'),
             // PageButton(buttonName: 'Screenseven'),
             SizedBox(height: 25),
