@@ -4,6 +4,7 @@ import 'package:flutter_wscube_practice/component/mytext.dart';
 import 'package:flutter_wscube_practice/screeneight_animation.dart';
 import 'package:flutter_wscube_practice/screenfive.dart';
 import 'package:flutter_wscube_practice/screenfour.dart';
+import 'package:flutter_wscube_practice/screennine.dart';
 import 'package:flutter_wscube_practice/screenseven.dart';
 import 'package:flutter_wscube_practice/screensix.dart';
 import 'package:flutter_wscube_practice/screenthree.dart';
@@ -228,7 +229,13 @@ class _HomescreenState extends State<Homescreen> {
                 MaterialPageRoute(builder: (context) => ScreeneightAnimation()),
               ),
             ),
-            // PageButton(buttonName: 'Screenseven'),
+            PageButton(
+              buttonName: 'Screenmine',
+              callback: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Screennine()),
+              ),
+            ),
             SizedBox(height: 25),
             Container(
               height: 35,
