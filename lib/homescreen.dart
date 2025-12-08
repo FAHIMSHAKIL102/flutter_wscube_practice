@@ -7,6 +7,7 @@ import 'package:flutter_wscube_practice/screenfour.dart';
 import 'package:flutter_wscube_practice/screennine.dart';
 import 'package:flutter_wscube_practice/screenseven.dart';
 import 'package:flutter_wscube_practice/screensix.dart';
+import 'package:flutter_wscube_practice/screenten.dart';
 import 'package:flutter_wscube_practice/screenthree.dart';
 import 'package:flutter_wscube_practice/screentwo.dart';
 
@@ -208,7 +209,7 @@ class _HomescreenState extends State<Homescreen> {
               ),
             ),
             PageButton(
-              buttonName: 'Screenseven',
+              buttonName: 'ScreenSeven',
               shadowColors: Colors.red,
               callback: () => Navigator.push(
                 context,
@@ -223,17 +224,24 @@ class _HomescreenState extends State<Homescreen> {
               ),
             ),
             PageButton(
-              buttonName: 'Screeneight',
+              buttonName: 'ScreenEight',
               callback: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => ScreeneightAnimation()),
               ),
             ),
             PageButton(
-              buttonName: 'Screenmine',
+              buttonName: 'ScreenNine',
               callback: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Screennine()),
+              ),
+            ),
+            PageButton(
+              buttonName: 'ScreenTen',
+              callback: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Screenten()),
               ),
             ),
             SizedBox(height: 25),

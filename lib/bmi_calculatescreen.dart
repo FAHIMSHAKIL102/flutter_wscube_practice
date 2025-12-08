@@ -12,7 +12,7 @@ class _BmiCalculatescreenState extends State<BmiCalculatescreen> {
   var wtController = TextEditingController();
   var fhtController = TextEditingController();
   var ihtController = TextEditingController();
-  var result = '';
+  var result = 'Result';
   Color resultColor = Colors.red;
   @override
   Widget build(BuildContext context) {

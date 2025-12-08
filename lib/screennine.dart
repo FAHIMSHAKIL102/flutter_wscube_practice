@@ -7,7 +7,7 @@ class Screennine extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Screennine'),
+        title: Text('ScreenNine'),
         backgroundColor: Colors.lightGreen,
       ),
       body: ListWheelScrollView(
