@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class ScreeneightAnimation extends StatefulWidget {
@@ -14,6 +16,7 @@ class _ScreeneightAnimationState extends State<ScreeneightAnimation> {
     color: Colors.cyan,
     borderRadius: BorderRadius.circular(0),
   );
+  double myOpacity = 1.0;
   bool isFlag = true;
   @override
   Widget build(BuildContext context) {
@@ -62,6 +65,26 @@ class _ScreeneightAnimationState extends State<ScreeneightAnimation> {
                 'Animate',
                 style: TextStyle(color: Colors.blueAccent),
               ),
+            ),
+            SizedBox(height: 20),
+            AnimatedOpacity(
+              opacity: myOpacity,
+              duration: Duration(seconds: 2),
+              child: Container(height: 200, width: 100, color: Colors.grey),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                if (isFlag) {
+                  myOpacity = 0.0;
+                  isFlag = false;
+                } else {
+                  myOpacity = 1.0;
+                  isFlag = true;
+                }
+                setState(() {});
+              },
+              child: Text('Animate'),
             ),
           ],
         ),
