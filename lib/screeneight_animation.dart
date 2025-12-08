@@ -1,4 +1,4 @@
-import 'dart:math';
+import 'dart:async';
 
 import 'package:flutter/material.dart';
 
@@ -18,6 +18,19 @@ class _ScreeneightAnimationState extends State<ScreeneightAnimation> {
   );
   double myOpacity = 1.0;
   bool isFlag = true;
+  bool isVisiable = true;
+  bool isFirst = true;
+  @override
+  void initState() {
+    super.initState();
+    Timer(Duration(seconds: 5), () => reload());
+  }
+
+  void reload() {
+    isFirst = false;
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,11 +40,10 @@ class _ScreeneightAnimationState extends State<ScreeneightAnimation> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(10),
               child: AnimatedContainer(
                 duration: Duration(seconds: 2),
                 height: _height,
@@ -66,21 +78,50 @@ class _ScreeneightAnimationState extends State<ScreeneightAnimation> {
                 style: TextStyle(color: Colors.blueAccent),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             AnimatedOpacity(
               opacity: myOpacity,
               duration: Duration(seconds: 2),
               child: Container(height: 200, width: 100, color: Colors.grey),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
-                if (isFlag) {
+                if (isVisiable) {
                   myOpacity = 0.0;
-                  isFlag = false;
+                  isVisiable = false;
                 } else {
                   myOpacity = 1.0;
-                  isFlag = true;
+                  isVisiable = true;
+                }
+                setState(() {});
+              },
+              child: Text('Animate'),
+            ),
+            AnimatedCrossFade(reverseDuration: Duration(seconds: 1),
+              firstChild: Container(
+                height: 100,
+                width: 100,
+                color: Colors.orangeAccent,
+              ),
+              secondChild: Image(
+                height: 100,
+                width: 100,
+                image: NetworkImage(
+                  'https://scontent.fzyl7-1.fna.fbcdn.net/v/t39.30808-1/409543739_3581708042096611_1241447858689791528_n.jpg?stp=dst-jpg_p160x160_tt6&_nc_cat=104&ccb=1-7&_nc_sid=e99d92&_nc_ohc=aGqJeyH3ga8Q7kNvwFSZME0&_nc_oc=AdkA3ORF6DuB5e4ny-fIibAC8pOGPq7F57czGKUMbEHxWRsQ_CfVOCvHrmRCHrr-5fM&_nc_zt=24&_nc_ht=scontent.fzyl7-1.fna&_nc_gid=Eww3xaCRKHZsR6NWN664zw&oh=00_AfmG4dsjogCMGlp0QaiPuIi7WB3TUm5ZbdrK4mEza9tNBA&oe=6938585D',
+                ),
+              ),
+              crossFadeState: isFirst
+                  ? CrossFadeState.showFirst
+                  : CrossFadeState.showSecond,
+              duration: Duration(seconds: 2),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                if (isFirst) {
+                  isFirst = false;
+                } else {
+                  isFirst = true;
                 }
                 setState(() {});
               },
