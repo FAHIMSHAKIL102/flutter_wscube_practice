@@ -14,14 +14,18 @@ class Heroanimation extends StatelessWidget {
         children: [
           Hero(
             tag: 'background',
-            child: Image(
-              image: AssetImage('assets/images/ssd.png')
+            child: Image(image: AssetImage('assets/images/ssd.png')),
+          ),
+          SizedBox(height: 70),
+          ClipRRect(
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.elliptical(70, 50),
+              bottomRight: Radius.circular(40),
             ),
-          ),SizedBox(height: 70),
-          ClipRRect(borderRadius: BorderRadius.only(topLeft: Radius.elliptical(70, 50),bottomRight: Radius.circular(40)),
-            child: Image(height: 300,
-                image: AssetImage('assets/images/ssd.png')
-              ),
+            child: Image(
+              height: 300,
+              image: AssetImage('assets/images/ssd.png'),
+            ),
           ),
         ],
       ),

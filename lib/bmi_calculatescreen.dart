@@ -73,19 +73,21 @@ class _BmiCalculatescreenState extends State<BmiCalculatescreen> {
                     var totalmeter = (totalinch * 2.54) / 100;
                     var bmi = intwt / (totalmeter * totalmeter);
                     var message = '';
-                    if (bmi > 24) {resultColor=Colors.red;
+                    if (bmi > 24) {
+                      resultColor = Colors.red;
                       message = 'You are OverWeight ';
                     } else if (bmi < 18) {
                       resultColor = Colors.blue;
-                      message= 'You are UnderWeight';
+                      message = 'You are UnderWeight';
                     } else {
-                      resultColor=Colors.green;
-                      message='You are Healthy';
+                      resultColor = Colors.green;
+                      message = 'You are Healthy';
                     }
-                    
+
                     result = '$message \n Your BMi ${bmi.toStringAsFixed(3)}';
                     setState(() {});
-                  } else {resultColor=Colors.red;
+                  } else {
+                    resultColor = Colors.red;
                     setState(() {
                       result = 'Please fillup the blanks';
                     });

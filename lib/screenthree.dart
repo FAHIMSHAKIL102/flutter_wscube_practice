@@ -59,7 +59,9 @@ class Screenthree extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 200,width: 200,
+                    SizedBox(
+                      height: 200,
+                      width: 200,
                       child: Stack(
                         children: [
                           Container(
@@ -68,7 +70,9 @@ class Screenthree extends StatelessWidget {
                             color: Colors.lime,
                             child: Text('Fahim'),
                           ),
-                          Positioned(top: 25,left: 25,
+                          Positioned(
+                            top: 25,
+                            left: 25,
                             child: Container(
                               height: 150,
                               width: 150,

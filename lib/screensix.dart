@@ -43,7 +43,7 @@ class _ScreensixState extends State<Screensix> {
                 MaterialPageRoute(builder: (context) => Screenseven()),
               );
             },
-            icon: Icon(Icons.arrow_circle_right,size: 40,color: Colors.white,),
+            icon: Icon(Icons.arrow_circle_right, size: 40, color: Colors.white),
           ),
         ],
       ),

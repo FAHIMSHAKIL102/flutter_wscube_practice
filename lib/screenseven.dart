@@ -10,10 +10,13 @@ class Screenseven extends StatelessWidget {
         title: Text('ScreenSeven'),
         backgroundColor: Colors.lightGreen,
       ),
-      body: Column(crossAxisAlignment: CrossAxisAlignment.start,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
-            child: Wrap(spacing: 10,runSpacing: 10,
+            child: Wrap(
+              spacing: 10,
+              runSpacing: 10,
               children: [
                 Container(height: 100, width: 100, color: Colors.amberAccent),
                 Container(height: 100, width: 100, color: Colors.lightBlue),
@@ -26,7 +29,11 @@ class Screenseven extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Wrap(direction: Axis.vertical,alignment: WrapAlignment.start,spacing: 10,runSpacing: 10,
+            child: Wrap(
+              direction: Axis.vertical,
+              alignment: WrapAlignment.start,
+              spacing: 10,
+              runSpacing: 10,
               children: [
                 Container(height: 100, width: 100, color: Colors.amberAccent),
                 Container(height: 100, width: 100, color: Colors.lightBlue),

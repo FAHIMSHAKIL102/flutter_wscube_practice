@@ -142,11 +142,12 @@ class _ScreeneightAnimationState extends State<ScreeneightAnimation> {
                       ),
                     );
                   },
-                  child: Hero(tag: 'background',
+                  child: Hero(
+                    tag: 'background',
                     child: Image(
                       height: 250,
                       width: 220,
-                      image:AssetImage('assets/images/ssd.png')
+                      image: AssetImage('assets/images/ssd.png'),
                     ),
                   ),
                 ),
