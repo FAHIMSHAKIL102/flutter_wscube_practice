@@ -10,6 +10,7 @@ import 'package:flutter_wscube_practice/screenseven.dart';
 import 'package:flutter_wscube_practice/screensix.dart';
 import 'package:flutter_wscube_practice/screenten.dart';
 import 'package:flutter_wscube_practice/screenthree.dart';
+import 'package:flutter_wscube_practice/screentwelve_animation.dart';
 import 'package:flutter_wscube_practice/screentwo.dart';
 
 class Homescreen extends StatefulWidget {
@@ -250,6 +251,15 @@ class _HomescreenState extends State<Homescreen> {
               callback: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Screeneleven()),
+              ),
+            ),
+            PageButton(
+              buttonName: 'ScreenTwelve',
+              callback: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ScreentwelveAnimation(),
+                ),
               ),
             ),
             SizedBox(height: 25),
