@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_wscube_practice/login_profile.dart';
 import 'package:flutter_wscube_practice/screenfive.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Screenfour extends StatelessWidget {
   Screenfour({super.key});
@@ -71,7 +73,13 @@ class Screenfour extends StatelessWidget {
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {
+              onPressed: ()async {
+                SharedPreferences sharePreference= await SharedPreferences.getInstance();
+                sharePreference.setString('email', emailcontroller.text.toString());
+                sharePreference.setString('password', passwordController.text.toString());
+                sharePreference.setBool('isLogin',true );
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginProfile()));
+
                 String yourEmail = emailcontroller.text.toString();
                 String yourPassword = passwordController.text.toString();
                 print(yourEmail);
