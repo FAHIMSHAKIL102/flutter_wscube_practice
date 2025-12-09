@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_wscube_practice/bmi_calculatescreen.dart';
 import 'package:flutter_wscube_practice/component/mytext.dart';
 import 'package:flutter_wscube_practice/screeneight_animation.dart';
+import 'package:flutter_wscube_practice/screeneleven.dart';
 import 'package:flutter_wscube_practice/screenfive.dart';
 import 'package:flutter_wscube_practice/screenfour.dart';
 import 'package:flutter_wscube_practice/screennine.dart';
@@ -242,6 +243,13 @@ class _HomescreenState extends State<Homescreen> {
               callback: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Screenten()),
+              ),
+            ),
+            PageButton(
+              buttonName: 'ScreenEleven',
+              callback: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Screeneleven()),
               ),
             ),
             SizedBox(height: 25),
